@@ -1,1 +1,122 @@
+//Program: Machine Problem#1
+//Programmers:
 
+#include <iostream>
+#include <iomanip>
+#include <string>
+
+using namespace std;
+
+int main ()
+{
+	//declaration of arrays and
+	//the variables to be used
+	//note before passing, change all array values to 50
+	string name[2];
+	int i;
+	int preEx[2];
+	int finEx[2];
+	int examTotal;
+	int quiz1[2];
+	int quiz2[2];
+	int quiz3[2];
+	int quiz4[2];
+	int quizTotal;   //sum of all quiz arrays elements
+	int seatW1[2];
+	int seatW2[2];
+	int seatW3[2];
+	int seatW4[2];
+	int seatW5[2];
+	int seatW6[2];
+	int seatW7[2];
+	int seatW8[2];
+	int seatW9[2];
+	int seatW10[2];
+	int seatWTotal;   //sum of all seatwork array elements
+	int boardPoint[2];
+	int notebook;
+	int students = 2;   //change to 50 later
+	int index = 0;
+	int count = 1;
+	double = quiz1Average;
+	
+	//loop statement for entering a student's name, quiz score, exams score, seatwork score
+    for (i = 0; i < students; i++)
+    {
+        cout << "Please enter student's name: "; cin >> name[i];
+        
+        for (i = 1; i < students; i++)
+        {
+           cout << "Enter their score on Quiz1: ";  cin >> quiz1[i];
+           cout << "Enter their score on Quiz2: ";  cin >> quiz2[i];
+           cout << "Enter their score on Quiz3: ";  cin >> quiz3[i];
+           cout << "Enter their score on Quiz4: ";  cin >> quiz4[i];
+           
+           //loop for summation of individual quiz array elements
+           for (i = 0; i < students; i++)
+           {
+           	    quizTotal = quizTotal + quiz1[i] + quiz2[i] + quiz3[i] + quiz4[i];
+           	    quiz1Average = (quiz1[i] / 100) * 0.15;
+           	    quiz2Average = (quiz2[i] / 100) * 0.15;
+           	    quiz3Average = (quiz3[i] / 100) * 0.15;
+           	    quiz4Average = (quiz4[i] / 100) * 0.15;
+		   }
+        }
+             
+        for (i = 0; i < students; i++)
+		{
+			cout << "Enter their score on Prelims Exam: "; cin >> preEx[i];
+			cout << "Enter their score on Finals Exam: "; cin >> finEx[i];
+			
+			
+			//loop for summation of individual exam array elements
+			for (i = 0; i < students; i++)
+			{
+				examTotal = examTotal + preEx[i] + finEx[i];
+				preExAverage = (preEx[i] / 100) * 0.20;
+				finExExAverage = (finEx[i] / 100) * 0.20
+			}
+        }
+    
+        for(i = 0; i < students; i++)
+        {
+            cout << "Enter their score on Seatwork1: "; cin >> seatW1[i];
+            cout << "Enter their score on Seatwork2: "; cin >> seatW2[i];
+            cout << "Enter their score on Seatwork3: "; cin >> seatW3[i];
+            cout << "Enter their score on Seatwork4: "; cin >> seatW4[i];
+            cout << "Enter their score on Seatwork5: "; cin >> seatW5[i];
+            cout << "Enter their score on Seatwork6: "; cin >> seatW6[i];
+            cout << "Enter their score on Seatwork7: "; cin >> seatW7[i];
+            cout << "Enter their score on Seatwork8: "; cin >> seatW8[i];
+            cout << "Enter their score on Seatwork9: "; cin >> seatW9[i];
+            cout << "Enter their score on Seatwork10: "; cin >> seatW10[i];
+            
+            //loop for summation of individual seatwork array elements
+            for (i = 0; i < students; i++)
+			{
+				seatWTotal = seatWTotal + seatW1[i] + seatW2[i] + seatW3[i] + seatW4[i] + seatW5[i] + seatW6[i] + seatW7[i] + seatW8[i] + seatW9[i] + seatW10[i];
+				
+				
+			}
+			
+			for (i = 0; i < count; i++)
+			{
+				cout << "Enter Board Points: "; cin >> boardPoint[i];
+			}
+        }
+
+    cout << endl;
+    }
+    
+    //print out the header names
+    cout << "Name" << "     " << "Quiz Total" << "     " << "Prelims" << "     " << "Finals" << "     " << "Seatwork Total";
+    cout << endl;
+
+    //loop to print out summation of quiz, exams, and seatworks
+    for(i = 0; i < students; i++)
+    {
+        cout << name[i] << "     " << quizTotal << "     " << preEx[i] << "     " << finEx[i] << "     " << seatWTotal;
+        cout << endl;
+    }
+	
+}
